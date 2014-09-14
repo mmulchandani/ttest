@@ -10,8 +10,13 @@ shinyUI(fluidPage(
       br(),
       br(),
       br(),
+      br(),
+      br(),
+      br(),
+      br(),
       uiOutput("filechoose"),
       uiOutput("cboxheader"),
+      br(),
       uiOutput("cboxpaired"),
       uiOutput("cboxvar"),
       br(),
@@ -26,10 +31,13 @@ shinyUI(fluidPage(
     
     mainPanel(
       tabsetPanel(
-        tabPanel("Output", uiOutput('contents'),
+        tabPanel("Main", uiOutput('contents'),
                  tableOutput('tbl'),
-                 uiOutput('contents2')), 
-        tabPanel("Usage Help", uiOutput("usage")), 
+                 uiOutput('contents2')
+#                  uiOutput('usagemain')
+                 ), 
+        tabPanel("Box Plot", plotOutput("boxplot")),
+        tabPanel("Usage Guide", uiOutput("usage")), 
         tabPanel("Credits and other Links", uiOutput("credits")),
         tabPanel("Limitations", uiOutput("limits"))
       )
