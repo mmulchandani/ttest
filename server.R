@@ -116,6 +116,17 @@ shinyServer(function(input,output, session) {
              fileInput('inputFile', "Upload File")
            }
     )
+    
+#     actionButton("btn", "Trigger server to reset file input")
+    
+#     tags$script('
+#     Shiny.addCustomMessageHandler("resetFileInputHandler", function(x) {      
+#         var id = "#" + x + "_progress";
+#         var idBar = id + " .bar";
+#         $(id).css("visibility", "hidden");
+#         $(idBar).css("width", "0%");
+#     });
+#   ')
   })
 
   # Dynamic input element (2) for "Upload Data" option
@@ -465,4 +476,13 @@ p("Finally, please look up the", b("Limitations"), "tab that describes some of t
          }
            )
          })
+
+# To switch to 'Main' tab, when a new option is selected
+observe({
+  
+  input$option
+  updateTabsetPanel(session, "maintabs", selected = "Main")
+  
+
+})
 })

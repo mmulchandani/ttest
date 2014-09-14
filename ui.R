@@ -30,7 +30,7 @@ shinyUI(fluidPage(
 #               uiOutput('contents2'))
     
     mainPanel(
-      tabsetPanel(
+      tabsetPanel(id = 'maintabs',
         tabPanel("Main", uiOutput('contents'),
                  tableOutput('tbl'),
                  uiOutput('contents2')
