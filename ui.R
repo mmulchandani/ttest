@@ -16,7 +16,8 @@ shinyUI(fluidPage(
       br(),
       uiOutput("filechoose"),
       uiOutput("cboxheader"),
-      br(),
+      uiOutput("hr"),
+      uiOutput("text"),
       uiOutput("cboxpaired"),
       uiOutput("cboxvar"),
       br(),
@@ -25,16 +26,11 @@ shinyUI(fluidPage(
       uiOutput("linkmsg")
       ),
     
-#     mainPanel(uiOutput('contents'),
-#               tableOutput('tbl'),
-#               uiOutput('contents2'))
-    
     mainPanel(
       tabsetPanel(id = 'maintabs',
         tabPanel("Main", uiOutput('contents'),
                  tableOutput('tbl'),
                  uiOutput('contents2')
-#                  uiOutput('usagemain')
                  ), 
         tabPanel("Box Plot", plotOutput("boxplot")),
         tabPanel("Usage Guide", uiOutput("usage")), 
@@ -43,8 +39,4 @@ shinyUI(fluidPage(
       )
     )
   )
-  
 ))
-
-#       selectInput("option", label = "Select an Option:", 
-#                   choices = c("Paired t-test Example", "Two Group t-test Example", "R Dataset: mtcars", "Upload Data"))
