@@ -46,7 +46,7 @@ shinyServer(function(input,output, session) {
           p("Demonstration of the application of t-test is done using the following three examples:"),
           ol(li("Paired Samples t-test Example"), li("Independent Samples t-test Example"), li("Independent Samples t-test using R's", b("mtcars"), "dataset")),
           p("Users can use a drop down list to select the different examples, as shown in the image below"),
-          img(src = "pic8.png", width = 200, height = 400),
+          img(src = "pic.png", width = 200, height = 400),
           br(),
           br(),
           p(b("Note:"),"The fifth option in the drop down list enables the user to upload their data and run
@@ -285,7 +285,7 @@ shinyServer(function(input,output, session) {
              p("Demonstration of the application of t-test is done using the following three examples:"),
              ol(li("Paired Samples t-test Example"), li("Independent Samples t-test Example"), li("Independent Samples t-test using R's", b("mtcars"), "dataset")),
              p("Users can use a drop down list to select the different examples, as shown in the image below"),
-             img(src = "pic8.png", width = 200, height = 400),
+             img(src = "pic.png", width = 200, height = 400),
              br(),
              br(),
              p(b("Note:"),"The fifth option in the drop down list enables the user to upload their data and run

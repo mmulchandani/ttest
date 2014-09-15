@@ -14,6 +14,7 @@ shinyUI(fluidPage(
       br(),
       br(),
       br(),
+      br(),
       uiOutput("filechoose"),
       uiOutput("cboxheader"),
       uiOutput("hr"),
